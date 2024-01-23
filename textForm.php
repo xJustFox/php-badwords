@@ -7,11 +7,13 @@
     $textLeng = strlen($text);
 
     // Censura parolacce
-    $newText = str_replace('stronzo', '*******', $text);
-    $newText = str_replace('coglione', '********', $newText);
-    $newText = str_replace('cazzo', '*****', $newText);
-    $newText = str_replace('puttana', '*******', $newText);
-    $newText = str_replace('fica', '****', $newText);
+    $newText = str_replace('stronzo', '***', $text);
+    $newText = str_replace('coglione', '***', $newText);
+    $newText = str_replace('cazzo', '***', $newText);
+    $newText = str_replace('puttana', '***', $newText);
+    $newText = str_replace('fica', '***', $newText);
+
+    $newLeng = strlen($newText);
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +36,7 @@
                 <h6>This is your uncensored text, its length is <?php echo $textLeng ?> characters:</h6>
                 <p><?php echo $text ?></p>
                 <hr>
-                <h6>This is your censored text:</h6>
+                <h6>This is your censored text: its length is <?php echo $newLeng ?> characters:</h6>
                 <p><?php echo $newText ?></p>
             </div>
         </div>
