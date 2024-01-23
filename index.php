@@ -16,10 +16,13 @@
                 <!-- Form -->
                 <form action="textForm.php" method="GET">
                     <div class="row">
+                        <div class="col-12 text-center text-white  mb-4">
+                            <h1>Bad Words</h1>
+                        </div>
                         <!-- Input Name -->
                         <div class="col-6 mb-3">
-                            <label for="name_input" class="form-label text-white">Name:</label>
-                            <input type="text" class="form-control form-control-sm" name="name" id="name_input" placeholder="Insert your name..." required>
+                            <label for="badWord" class="form-label text-white">Choose the word to censor:</label>
+                            <input type="text" class="form-control form-control-sm" name="badword" id="badWord" placeholder="Insert word..." required>
                         </div>
                         <!-- Input Text -->
                         <div class="col-12 mb-3">

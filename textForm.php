@@ -1,15 +1,15 @@
 <?php
     // inizializzazione variabile assegnadogli come valore i dati presi dal Form 
-    $name = $_GET['name'];
+    $badWord = $_GET['badword'];
     $text = $_GET['text'];
 
     // recupero la lunghezza di tutta la stringa, compresi gli spazi
     $textLeng = strlen($text);
 
     // Censura parole
-    $newText = str_replace('ciao', '***', $text);
-    $newText = str_replace('caro', '***', $newText);
+    $newText = str_replace($badWord, '***', $text);
 
+    // recupero la lunghezza di tutta la stringa con la censura, compresi gli spazi
     $newLeng = strlen($newText);
 ?>
 
@@ -28,12 +28,11 @@
     <div class="container-fluid my-vh my-bg-black">
         <div class="row justify-content-center align-items-center my-vh">
             <div class="col-4 my-bg-gray rounded-1 py-2 text-white">
-
-                <h1 class="text-center">Hi <?php echo $name ?>!</h1>
-                <h6>This is your uncensored text, its length is <?php echo $textLeng ?> characters:</h6>
+                <h1 class="text-center mb-4">Bad Words</h1>
+                <h4>This is your uncensored text, its length is <?php echo $textLeng ?> characters:</h4>
                 <p><?php echo $text ?></p>
                 <hr>
-                <h6>This is your censored text: its length is <?php echo $newLeng ?> characters:</h6>
+                <h4>This is your censored text: its length is <?php echo $newLeng ?> characters:</h4>
                 <p><?php echo $newText ?></p>
             </div>
         </div>
