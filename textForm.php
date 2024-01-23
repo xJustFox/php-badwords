@@ -1,9 +1,17 @@
 <?php
+    // inizializzazione variabile assegnadogli come valore i dati presi dal Form 
     $name = $_GET['name'];
     $text = $_GET['text'];
 
-    var_dump($name);
-    var_dump($text)
+    // recupero la lunghezza di tutta la stringa, compresi gli spazi
+    $textLeng = strlen($text);
+
+    // Censura parolacce
+    $newText = str_replace('stronzo', '*******', $text);
+    $newText = str_replace('coglione', '********', $newText);
+    $newText = str_replace('cazzo', '*****', $newText);
+    $newText = str_replace('puttana', '*******', $newText);
+    $newText = str_replace('fica', '****', $newText);
 ?>
 
 <!DOCTYPE html>
@@ -21,9 +29,13 @@
     <div class="container-fluid my-vh my-bg-black">
         <div class="row justify-content-center align-items-center my-vh">
             <div class="col-4 my-bg-gray rounded-1 py-2 text-white">
+
                 <h1 class="text-center">Hi <?php echo $name ?>!</h1>
-                <h6>This is your censored text:</h6>
+                <h6>This is your uncensored text, its length is <?php echo $textLeng ?> characters:</h6>
                 <p><?php echo $text ?></p>
+                <hr>
+                <h6>This is your censored text:</h6>
+                <p><?php echo $newText ?></p>
             </div>
         </div>
     </div>
