@@ -6,12 +6,9 @@
     // recupero la lunghezza di tutta la stringa, compresi gli spazi
     $textLeng = strlen($text);
 
-    // Censura parolacce
-    $newText = str_replace('stronzo', '***', $text);
-    $newText = str_replace('coglione', '***', $newText);
-    $newText = str_replace('cazzo', '***', $newText);
-    $newText = str_replace('puttana', '***', $newText);
-    $newText = str_replace('fica', '***', $newText);
+    // Censura parole
+    $newText = str_replace('ciao', '***', $text);
+    $newText = str_replace('caro', '***', $newText);
 
     $newLeng = strlen($newText);
 ?>
