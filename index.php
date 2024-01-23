@@ -10,20 +10,20 @@
 </head>
 
 <body>
-    <div class="container-fluid my-vh">
+    <div class="container-fluid my-vh my-bg-black">
         <div class="row justify-content-center align-items-center my-vh">
-            <div class="col-4 bg-secondary rounded-1 py-2">
+            <div class="col-4 my-bg-gray rounded-1 py-2">
                 <!-- Form -->
                 <form action="textForm.php" method="GET">
                     <div class="row">
                         <!-- Input Name -->
                         <div class="col-6 mb-3">
-                            <label for="name_input" class="form-label">Name:</label>
+                            <label for="name_input" class="form-label text-white">Name:</label>
                             <input type="text" class="form-control form-control-sm" name="name" id="name_input" placeholder="Insert your name..." required>
                         </div>
                         <!-- Input Text -->
                         <div class="col-12 mb-3">
-                            <label for="text_input" class="form-label">Textarea:</label>
+                            <label for="text_input" class="form-label text-white">Textarea:</label>
                             <textarea class="form-control form-control-sm" name="text" id="text_input" rows="4" placeholder="Write whatever you want..." required></textarea>
                         </div>
                         <!-- Button Submit -->

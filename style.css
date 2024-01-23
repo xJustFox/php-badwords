@@ -1,3 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .my-vh{
     height: 100vh;
+}
+
+.my-bg-black{
+    background-color: #1d1a1c;
+}
+
+.my-bg-gray{
+    background-color: #545454;
 }
